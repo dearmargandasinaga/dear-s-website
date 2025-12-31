@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengaturan - Dear Marganda Sinaga</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="page-transition" class="page-transition">
+    <div class="cube-wrapper">
+      <div class="cube">
+        <div class="cube-face front">1</div>
+        <div class="cube-face back">2</div>
+        <div class="cube-face right">3</div>
+        <div class="cube-face left">4</div>
+        <div class="cube-face top">5</div>
+        <div class="cube-face bottom">6</div>
+      </div>
+    </div>
+    <div class="transition-light"></div>
+    <h2 class="transition-name">Dear Marganda Sinaga</h2>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-logo">
+          <div class="logo-cube"></div>
+          <span class="logo-text">Dear Marganda Sinaga</span>
+        </div>
+        <ul class="navbar-links">
+          <li><a href="index.html" class="navbar-link"><span class="icon">🏠</span><span class="link-text" data-translate="home">Beranda</span></a></li>
+          <li><a href="resolution-center.html" class="navbar-link"><span class="icon">🎯</span><span class="link-text" data-translate="resolutionCenter">Pusat Resolusi</span></a></li>
+          <li><a href="settings.html" class="navbar-link active"><span class="icon">⚙️</span><span class="link-text" data-translate="settings">Pengaturan</span></a></li>
+        </ul>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-toggle-icon light">☀️</span>
+          <span class="theme-toggle-icon dark">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="page-header">
+        <h1 class="page-title" data-translate="settings">Pengaturan</h1>
+        <p class="page-description" data-translate="settingsDescription">Sesuaikan pengaturan website sesuai preferensi Anda.</p>
+      </div>
+
+      <div class="settings-container">
+        <div class="card settings-card">
+          <div class="card-header">
+            <h2 class="card-title"><span class="card-icon">🌐</span><span data-translate="language">Bahasa</span></h2>
+            <p class="card-description" data-translate="languageDescription">Pilih bahasa yang ingin Anda gunakan</p>
+          </div>
+          <div class="card-content">
+            <div class="radio-group" id="language-options">
+              <div class="radio-option">
+                <input type="radio" id="lang-id" name="language" value="id" checked>
+                <label for="lang-id">Bahasa Indonesia</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="lang-en" name="language" value="en">
+                <label for="lang-en">English</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card settings-card">
+          <div class="card-header">
+            <h2 class="card-title"><span class="card-icon theme-icon">☀️</span><span data-translate="theme">Tema</span></h2>
+            <p class="card-description" data-translate="themeDescription">Pilih tema yang ingin Anda gunakan</p>
+          </div>
+          <div class="card-content">
+            <div class="radio-group" id="theme-options">
+              <div class="radio-option">
+                <input type="radio" id="theme-light" name="theme" value="light">
+                <label for="theme-light" data-translate="lightTheme">Tema Terang</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="theme-dark" name="theme" value="dark">
+                <label for="theme-dark" data-translate="darkTheme">Tema Gelap</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="theme-system" name="theme" value="system" checked>
+                <label for="theme-system" data-translate="systemTheme">Tema Sistem</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+  <script src="settings.js"></script>
+</body>
+</html>

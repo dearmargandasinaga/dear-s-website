@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dear Marganda Sinaga</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="page-transition" class="page-transition">
+    <div class="cube-wrapper">
+      <div class="cube">
+        <div class="cube-face front">1</div>
+        <div class="cube-face back">2</div>
+        <div class="cube-face right">3</div>
+        <div class="cube-face left">4</div>
+        <div class="cube-face top">5</div>
+        <div class="cube-face bottom">6</div>
+      </div>
+    </div>
+    <div class="transition-light"></div>
+    <h2 class="transition-name">Dear Marganda Sinaga</h2>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-logo">
+          <div class="logo-cube"></div>
+          <span class="logo-text">Dear Marganda Sinaga</span>
+        </div>
+        <ul class="navbar-links">
+          <li><a href="index.html" class="navbar-link active"><span class="icon">🏠</span><span class="link-text" data-translate="home">Beranda</span></a></li>
+          <li><a href="portfolio.html" class="navbar-link"><span class="icon">💼</span><span class="link-text">Portofolio</span></a></li>
+          <li><a href="resolution-center.html" class="navbar-link"><span class="icon">🎯</span><span class="link-text" data-translate="resolutionCenter">Pusat Resolusi</span></a></li>
+          <li><a href="library.html" class="navbar-link"><span class="icon">📚</span><span class="link-text" data-translate="library">Perpustakaan</span></a></li>
+          <li><a href="settings.html" class="navbar-link"><span class="icon">⚙️</span><span class="link-text" data-translate="settings">Pengaturan</span></a></li>
+        </ul>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-toggle-icon light">☀️</span>
+          <span class="theme-toggle-icon dark">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="profile-card">
+        <div class="profile-header"></div>
+        <div class="profile-avatar">
+          <img src="deee.JPG" alt="Dear Marganda Sinaga" class="profile-image">
+        </div>
+        <div class="profile-content">
+          <h1 class="profile-name">Dear Marganda Sinaga</h1>
+          <p class="profile-subtitle" data-translate="studentAt">Siswa di SMP Negeri 31 Medan</p>
+          <p class="profile-description" data-translate="welcomeMessage">Selamat datang di website pribadi saya. Saya seorang siswa kelas 8 di SMP Negeri 31 Medan.</p>
+          <div class="profile-actions">
+            <a href="portfolio.html" class="button primary">Portofolio</a>
+            <a href="resolution-center.html" class="button primary">Pusat Resolusi</a>
+            <a href="library.html" class="button secondary">Perpustakaan</a>
+            <a href="settings.html" class="button secondary">Pengaturan</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card about-card">
+          <div class="card-header">
+            <h2 class="card-title"><span class="card-icon">👤</span><span data-translate="aboutMe">Tentang Saya</span></h2>
+          </div>
+          <div class="card-content">
+            <p data-translate="aboutMeContent">Halo! Saya Dear Marganda Sinaga, seorang siswa kelas 8 yang bersekolah di SMP Negeri 31 Medan. Saya senang belajar dan mengembangkan diri.</p>
+          </div>
+        </div>
+
+        <div class="card education-card">
+          <div class="card-header">
+            <h2 class="card-title"><span class="card-icon">🏫</span><span data-translate="education">Pendidikan</span></h2>
+          </div>
+          <div class="card-content">
+            <div class="education-item">
+              <span class="education-icon">🎓</span>
+              <div class="education-details">
+                <p class="education-school">SMP Negeri 31 Medan</p>
+                <p class="education-grade" data-translate="grade">Kelas 8</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card location-card">
+          <div class="card-header">
+            <h2 class="card-title"><span class="card-icon">📍</span><span data-translate="location">Lokasi</span></h2>
+          </div>
+          <div class="card-content">
+            <p>Medan, Sumatera Utara, Indonesia</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Percepat animasi perpindahan halaman
+    function handlePageTransition(url) {
+      const pageTransition = document.getElementById('page-transition');
+      if (pageTransition) {
+        pageTransition.classList.add('active');
+        setTimeout(() => {
+          window.location.href = url;
+        }, 800); // Durasi animasi dipercepat menjadi 800ms
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>

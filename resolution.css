@@ -1,0 +1,438 @@
+/* Projects Filter */
+.projects-filter {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  animation: fadeInDown 0.6s ease;
+}
+
+.filter-btn {
+  padding: 0.65rem 1.5rem;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border);
+  background: var(--card);
+  color: var(--foreground);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.9rem;
+}
+
+.filter-btn:hover {
+  border-color: var(--primary);
+  background: rgba(124, 58, 237, 0.05);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.6s ease;
+}
+
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.project-image {
+  position: relative;
+  overflow: hidden;
+  height: 240px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.1);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.view-project-btn {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+.view-project-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+}
+
+.project-content {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0;
+  flex: 1;
+}
+
+.project-status {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.project-status.completed {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.project-status.ongoing {
+  background: rgba(59, 130, 246, 0.15);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.project-category {
+  color: var(--muted-foreground);
+  font-size: 0.85rem;
+  margin: 0 0 0.75rem 0;
+  font-weight: 500;
+}
+
+.project-description {
+  color: var(--foreground);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.project-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.tool-badge {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(236, 72, 153, 0.1));
+  color: var(--primary);
+  padding: 0.3rem 0.7rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.project-year {
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+  font-weight: 500;
+}
+
+.project-detail-btn {
+  background: transparent;
+  border: none;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.project-detail-btn:hover {
+  transform: translateX(5px);
+}
+
+/* Empty State */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+
+.empty-state p {
+  color: var(--muted-foreground);
+}
+
+/* Project Modal */
+.project-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.project-modal.closing {
+  animation: fadeOut 0.3s ease;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.modal-dialog {
+  position: relative;
+  z-index: 10;
+  background: var(--card);
+  border-radius: var(--radius);
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--background);
+  border: none;
+  font-size: 1.75rem;
+  cursor: pointer;
+  color: var(--foreground);
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: var(--transition);
+  z-index: 11;
+}
+
+.modal-close:hover {
+  background: var(--primary);
+  color: white;
+  transform: rotate(90deg);
+}
+
+.modal-image {
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-content {
+  padding: 2rem;
+}
+
+.modal-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.modal-meta {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.badge.status {
+  background: rgba(124, 58, 237, 0.15);
+  color: var(--primary);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+.badge.status.completed {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.badge.category {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+}
+
+.badge.year {
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.modal-description {
+  color: var(--foreground);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.modal-tools h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tool {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(236, 72, 153, 0.1));
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

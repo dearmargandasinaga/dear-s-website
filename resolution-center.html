@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resolution for You - Dear Marganda Sinaga</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="resolution.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="page-transition" class="page-transition">
+    <div class="cube-wrapper">
+      <div class="cube">
+        <div class="cube-face front">1</div>
+        <div class="cube-face back">2</div>
+        <div class="cube-face right">3</div>
+        <div class="cube-face left">4</div>
+        <div class="cube-face top">5</div>
+        <div class="cube-face bottom">6</div>
+      </div>
+    </div>
+    <div class="transition-light"></div>
+    <h2 class="transition-name">Dear Marganda Sinaga</h2>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-logo">
+          <div class="logo-cube"></div>
+          <span class="logo-text">Dear Marganda Sinaga</span>
+        </div>
+        <ul class="navbar-links">
+          <li><a href="index.html" class="navbar-link"><span class="icon">🏠</span><span class="link-text" data-translate="home">Beranda</span></a></li>
+          <li><a href="portfolio.html" class="navbar-link"><span class="icon">💼</span><span class="link-text">Portofolio</span></a></li>
+          <li><a href="resolution-center.html" class="navbar-link active"><span class="icon">🎯</span><span class="link-text" data-translate="resolutionCenter">Resolution for You</span></a></li>
+          <li><a href="library.html" class="navbar-link"><span class="icon">📚</span><span class="link-text" data-translate="library">Perpustakaan</span></a></li>
+          <li><a href="settings.html" class="navbar-link"><span class="icon">⚙️</span><span class="link-text" data-translate="settings">Pengaturan</span></a></li>
+        </ul>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-toggle-icon light">☀️</span>
+          <span class="theme-toggle-icon dark">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="page-header">
+        <h1 class="page-title" data-translate="resolutionCenter">Resolution for You</h1>
+        <p class="page-description" data-translate="resolutionDescription">Koleksi proyek-proyek menarik yang telah dan sedang saya kerjakan.</p>
+      </div>
+
+      <!-- Filter/Category -->
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="multimedia">Multimedia</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="other">Lainnya</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div id="projects-container" class="projects-grid">
+        <!-- Projects will be loaded here by JavaScript -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="empty-state" class="empty-state" style="display: none;">
+        <div class="empty-icon">📭</div>
+        <h3>Tidak ada proyek</h3>
+        <p>Proyek akan ditampilkan di sini</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+  <script src="resolution.js"></script>
+</body>
+</html>

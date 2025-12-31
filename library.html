@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perpustakaan - Dear Marganda Sinaga</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="library.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="page-transition" class="page-transition">
+    <div class="cube-wrapper">
+      <div class="cube">
+        <div class="cube-face front">1</div>
+        <div class="cube-face back">2</div>
+        <div class="cube-face right">3</div>
+        <div class="cube-face left">4</div>
+        <div class="cube-face top">5</div>
+        <div class="cube-face bottom">6</div>
+      </div>
+    </div>
+    <div class="transition-light"></div>
+    <h2 class="transition-name">Dear Marganda Sinaga</h2>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-logo">
+          <div class="logo-cube"></div>
+          <span class="logo-text">Dear Marganda Sinaga</span>
+        </div>
+        <ul class="navbar-links">
+          <li><a href="index.html" class="navbar-link"><span class="icon">🏠</span><span class="link-text" data-translate="home">Beranda</span></a></li>
+          <li><a href="resolution-center.html" class="navbar-link"><span class="icon">🎯</span><span class="link-text" data-translate="resolutionCenter">Pusat Resolusi</span></a></li>
+          <li><a href="library.html" class="navbar-link active"><span class="icon">📚</span><span class="link-text" data-translate="library">Perpustakaan</span></a></li>
+          <li><a href="settings.html" class="navbar-link"><span class="icon">⚙️</span><span class="link-text" data-translate="settings">Pengaturan</span></a></li>
+        </ul>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-toggle-icon light">☀️</span>
+          <span class="theme-toggle-icon dark">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="page-header">
+        <h1 class="page-title" data-translate="library">Perpustakaan</h1>
+        <p class="page-description" data-translate="libraryDescription">Kumpulan artikel dan tulisan menarik untuk dibaca.</p>
+      </div>
+
+      <div class="library-container">
+        <div class="library-sidebar">
+          <div class="card">
+            <div class="card-header">
+              <h2 class="card-title"><span class="card-icon">📋</span><span data-translate="categories">Kategori</span></h2>
+            </div>
+            <div class="card-content">
+              <ul class="category-list">
+                <li class="category-item active"><a href="#" data-category="all" data-translate="allArticles">Semua Artikel</a></li>
+                <li class="category-item"><a href="#" data-category="history" data-translate="history">Sejarah</a></li>
+                <li class="category-item"><a href="#" data-category="science" data-translate="science">Sains</a></li>
+                <li class="category-item"><a href="#" data-category="technology" data-translate="technology">Teknologi</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="library-content">
+          <div class="article-list">
+            <div class="article-card card" data-category="history">
+              <div class="article-image">
+                <img src="saddam.jpg" alt="Saddam Hussein" class="article-thumbnail">
+                <div class="article-category" data-translate="history">Sejarah</div>
+              </div>
+              <div class="card-content">
+                <h3 class="article-title">Mengapa Saddam Hussein Dibunuh Amerika Serikat? Ini Alasannya!</h3>
+                <p class="article-excerpt">Saddam Hussein, mantan presiden Irak, dieksekusi pada 30 Desember 2006 setelah diadili oleh Pengadilan Tinggi Irak. Artikel ini mengupas alasan di balik jatuhnya rezim Saddam Hussein dan keterlibatan Amerika Serikat.</p>
+                <div class="article-meta">
+                  <span class="article-date">30 Desember 2023</span>
+                  <a href="article-saddam.html" class="article-read-more" data-translate="readMore">Baca Selengkapnya</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="article-card card" data-category="technology">
+              <div class="article-image">
+                <img src="pda-technology.jpg" alt="Teknologi PDA" class="article-thumbnail">
+                <div class="article-category" data-translate="technology">Teknologi</div>
+              </div>
+              <div class="card-content">
+                <h3 class="article-title">Teknologi PDA yang Terlupakan: Dari Masa Depan hingga Sejarah</h3>
+                <p class="article-excerpt">PDA (Personal Digital Assistant) adalah perangkat yang pernah menjadi simbol kemajuan teknologi, namun kini terasa seperti pesan dari masa lalu. Mari kita telusuri sejarah perangkat revolusioner ini.</p>
+                <div class="article-meta">
+                  <span class="article-date">15 Januari 2024</span>
+                  <a href="article-pda.html" class="article-read-more" data-translate="readMore">Baca Selengkapnya</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Placeholder for future articles -->
+            <div class="article-card card placeholder" data-category="science">
+              <div class="article-image placeholder-image">
+                <div class="article-category" data-translate="comingSoon">Segera Hadir</div>
+              </div>
+              <div class="card-content">
+                <h3 class="article-title placeholder-title" data-translate="comingSoonArticle">Artikel Baru Akan Segera Hadir</h3>
+                <p class="article-excerpt placeholder-text" data-translate="comingSoonDescription">Artikel-artikel baru sedang dalam proses penulisan dan akan segera ditambahkan ke perpustakaan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+  <script src="library.js"></script>
+</body>
+</html>
